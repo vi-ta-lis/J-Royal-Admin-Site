@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Food Item</title>
+    <style>
+      .edit-container {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+      }
+      .edit-container input,
+      .edit-container button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      .edit-container button {
+        background-color: #4caf50;
+        color: white;
+        font-size: 16px;
+      }
+      .edit-container button:disabled {
+        background-color: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="edit-container">
+      <h2>Edit Food Item</h2>
+      <div id="food-box">
+        <!-- This is where the food data will be loaded dynamically -->
+        <label for="food-name">Food Name</label>
+        <input
+          type="text"
+          id="food-name"
+          placeholder="Enter food name"
+          required
+        />
+
+        <label for="food-price">Price</label>
+        <input
+          type="number"
+          id="food-price"
+          placeholder="Enter food price"
+          required
+        />
+
+        <label for="food-image">Image URL</label>
+        <input
+          type="file"
+          id="food-image"
+          placeholder="Enter image URL"
+          required
+        />
+
+        <button id="apply-changes-btn">Apply Changes</button>
+        <button id="back-btn">
+          <a style="text-decoration: none; color: white" href="admenu.html"
+            >Back</a
+          >
+        </button>
+      </div>
+    </div>
+
+    <script>
+      // Get food ID from URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const foodId = urlParams.get("id");
+
+      // Simulate fetching food details from the database based on foodId (For demo purposes)
+      const foodData = {
+        box1: {
+          name: "Melon-soup",
+          price: "₦5000",
+          image: "frontend/img/Soup1.jpg",
+        },
+        box2: {
+          name: "Afang-Soup",
+          price: "₦5000",
+          image: "frontend/img/Soup2.jpg",
+        },
+        box3: {
+          name: "White-Soup",
+          price: "₦5000",
+          image: "frontend/img/Soup3.jpg",
+        },
+        box4: {
+          name: "Vegetable-Soup",
+          price: "₦5000",
+          image: "frontend/img/Soup4.jpg",
+        },
+        box5: {
+          name: "Moi-Moi",
+          price: "₦800",
+          image: "frontend/img/vegetarian1.jpg",
+        },
+        box6: {
+          name: "Fried Plantain$Beans",
+          price: "₦1250",
+          image: "frontend/img/vegetarian3.jpg",
+        },
+        box7: {
+          name: "Cooked Potatoes",
+          price: "₦1500",
+          image: "frontend/img/Soup1.jpg",
+        },
+        box8: {
+          name: "Yam Porridge",
+          price: "₦2800",
+          image: "frontend/img/vegetarian4.jpg",
+        },
+        box9: {
+          name: "Plantain Porridge",
+          price: "₦2800",
+          image: "frontend/img/vegetarian5.jpg",
+        },
+        box10: {
+          name: "Beans Cake",
+          price: "₦800",
+          image: "frontend/img/vegetarian6-min.jpg",
+        },
+        box12: {
+          name: "Chocolate Cake",
+          price: "₦1300",
+          image: "frontend/img/dessert1.jpg",
+        },
+        box13: {
+          name: "Sandwich",
+          price: "₦1400",
+          image: "frontend/img/dessert13.jpg",
+        },
+        box14: {
+          name: "Vanilla Cake",
+          price: "₦1300",
+          image: "frontend/img/dessert2.jpg",
+        },
+        box15: {
+          name: "Chocolate ice-cream",
+          price: "₦1300",
+          image: "frontend/img/dessert3.jpg",
+        },
+        box16: {
+          name: "Doughnut",
+          price: "₦1300",
+          image: "frontend/img/dessert4.jpg",
+        },
+        box17: {
+          name: "Berries",
+          price: "₦1450",
+          image: "frontend/img/dessert5.jpg",
+        },
+        box18: {
+          name: "Choco-Vanila",
+          price: "₦1400",
+          image: "frontend/img/dessert6.jpg",
+        },
+        box19: {
+          name: "Smtnn",
+          price: "₦3000",
+          image: "frontend/img/drink1.jpg",
+        },
+        box20: {
+          name: "Scotch",
+          price: "₦3000",
+          image: "frontend/img/drink2.jpg",
+        },
+        box21: {
+          name: "Vodka",
+          price: "₦10000",
+          image: "frontend/img/drink3.jpg",
+        },
+        box22: {
+          name: "Red Wine",
+          price: "₦10000",
+          image: "frontend/img/drink4.jpg",
+        },
+        box23: {
+          name: "Berry Smoothie",
+          price: "₦10000",
+          image: "frontend/img/drink5.jpg",
+        },
+        box24: {
+          name: "Naija Jollof",
+          price: "₦5500",
+          image: "frontend/img/dish1.jpg",
+        },
+        box25: {
+          name: "Fried Rice",
+          price: "₦5500",
+          image: "frontend/img/dish2.jpg",
+        },
+        box26: {
+          name: "Egg-Fried Rice",
+          price: "₦6000",
+          image: "frontend/img/dish3.jpg",
+        },
+        box27: {
+          name: "Cocunut Rice",
+          price: "₦6000",
+          image: "frontend/img/dish4.jpg",
+        },
+        box28: {
+          name: "Rice with Stew",
+          price: "₦6000",
+          image: "frontend/img/dish5.jpg",
+        },
+        box29: {
+          name: "Sea-Food Rice",
+          price: "₦6000",
+          image: "frontend/img/dish6.jpg",
+        },
+        box30: {
+          name: "Spaghetti",
+          price: "₦6000",
+          image: "frontend/img/dish7.jpg",
+        },
+        box31: {
+          name: "Macaroni",
+          price: "₦4500",
+          image: "frontend/img/dish8.jpg",
+        },
+        box32: {
+          name: "Fried Ice-cream",
+          price: "₦2500",
+          image: "frontend/img/snack1.jpg",
+        },
+        box33: {
+          name: "Cup Cake",
+          price: "₦2500",
+          image: "frontend/img/snack11 (2).jpg",
+        },
+        box34: {
+          name: "Fries and Chicken",
+          price: "₦2500",
+          image: "frontend/img/snack2.jpg",
+        },
+        box35: {
+          name: "Burger",
+          price: "₦2500",
+          image: "frontend/img/snack3.jpg",
+        },
+        box36: {
+          name: "Choco-Cookies",
+          price: "₦2500",
+          image: "frontend/img/snack4.jpg",
+        },
+        box37: {
+          name: "Sharwarma",
+          price: "₦2500",
+          image: "frontend/img/snack5.jpg",
+        },
+        box38: {
+          name: "Pizza",
+          price: "₦2500",
+          image: "frontend/img/snack6.jpg",
+        },
+        box39: {
+          name: "Spring Rolls",
+          price: "₦2500",
+          image: "frontend/img/snack12.jpg",
+        },
+        box40: {
+          name: "Spring Rolls",
+          price: "₦2500",
+          image: "frontend/img/snack12.jpg",
+        },
+        box41: {
+          name: "Spring Rolls",
+          price: "₦2500",
+          image: "frontend/img/snack12.jpg",
+        },
+      };
+
+      // Load the food item data into the form
+      const foodItem = foodData[foodId];
+      if (foodItem) {
+        document.getElementById("food-name").value = foodItem.name;
+        document.getElementById("food-price").value = foodItem.price.replace(
+          "₦",
+          ""
+        );
+        document.getElementById("food-image").value = foodItem.image;
+      }
+
+      // Apply changes when the "Apply Changes" button is clicked
+      document
+        .getElementById("apply-changes-btn")
+        .addEventListener("click", function () {
+          const updatedFoodName = document.getElementById("food-name").value;
+          const updatedFoodPrice = document.getElementById("food-price").value;
+          const updatedFoodImage = document.getElementById("food-image").value;
+
+          // You can now send the updated data to the server via an AJAX request (for example)
+          console.log(
+            `Updated Data: Name: ${updatedFoodName}, Price: ₦${updatedFoodPrice}, Image: ${updatedFoodImage}`
+          );
+
+          // After the update, you might want to redirect the user back to the menu page or show a success message
+          alert("Changes applied successfully!");
+        });
+    </script>
+  </body>
+</html>

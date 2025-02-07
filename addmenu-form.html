@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Food Upload</title>
+    <link rel="stylesheet" href="assets/css/add-menu-form.css" />
+  </head>
+  <body>
+    <div class="admin-form">
+      <h2>Add New Food Item</h2>
+      <form id="foodForm">
+        <label for="foodName">Dish Name:</label>
+        <input type="text" id="foodName" name="foodName" required />
+
+        <label for="foodName">Category:</label>
+        <input type="text" id="category" name="category" required />
+
+        <label for="foodImage">Dish Image:</label>
+        <input
+          type="file"
+          id="foodImage"
+          name="foodImage"
+          accept="image/*"
+          required
+        />
+
+        <label for="foodPrice">Price:</label>
+        <input type="number" id="foodPrice" name="foodPrice" required />
+
+        <label for="foodAvailability">Availability:</label>
+        <select id="foodAvailability" name="foodAvailability">
+          <option value="available">Available</option>
+          <option value="unavailable">Unavailable</option>
+        </select>
+
+        <button type="submit">Add Food</button>
+      </form>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

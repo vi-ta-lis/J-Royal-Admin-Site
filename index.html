@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Responsive Admin Dashboard | Korsat X Parmaga</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+      <div class="navigation">
+        <ul>
+          <li>
+            <a href="#">
+              <span class="titles"
+                ><img src="img/jroyalgrills'n'chopsnewlogo.png" alt=""
+              /></span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="icon">
+                <ion-icon name="home-outline"></ion-icon>
+              </span>
+              <span class="title">Dashboard</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="icon">
+                <ion-icon name="people-outline"></ion-icon>
+              </span>
+              <span class="title">Customers</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="icon">
+                <ion-icon name="chatbubble-outline"></ion-icon>
+              </span>
+              <span class="title"><a href="admenu.html">Manage menu</a></span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="icon">
+                <ion-icon name="help-outline"></ion-icon>
+              </span>
+              <span class="title">Help</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="icon">
+                <ion-icon name="settings-outline"></ion-icon>
+              </span>
+              <span class="title">Settings</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="icon">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+              </span>
+              <span class="title">Password</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="icon">
+                <ion-icon name="log-out-outline"></ion-icon>
+              </span>
+              <span class="title">Sign Out</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ========================= Main ==================== -->
+      <div class="containers">
+        <h1>Restaurant Admin Dashboard</h1>
+
+        <div class="dashboard">
+          <!-- Key Stats -->
+          <div class="card">
+            <h3>Total Orders Today: <span id="totalOrders">0</span></h3>
+            <h3>Total Revenue: $<span id="totalRevenue">0</span></h3>
+            <h3>Pending Orders: <span id="pendingOrders">0</span></h3>
+            <h3>Active Reservations: <span id="activeReservations">0</span></h3>
+          </div>
+
+          <!-- Sales Chart -->
+          <div class="card">
+            <h3>Sales Trends</h3>
+            <canvas id="salesChart"></canvas>
+          </div>
+
+          <!-- Top-Selling Items Chart -->
+          <div class="card">
+            <h3>Top Selling Items</h3>
+            <canvas id="topSellingChart"></canvas>
+          </div>
+
+          <!-- Inventory Alerts -->
+          <div class="card">
+            <h3>Low Stock Alerts</h3>
+            <canvas id="inventoryChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Recent Orders -->
+        <div class="card">
+          <h3>Recent Orders</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>Status</th>
+                <th>Total Price</th>
+              </tr>
+            </thead>
+            <tbody id="ordersTable">
+              <!-- Orders will be added dynamically -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Reservations -->
+        <div class="card">
+          <h3>Upcoming Reservations</h3>
+          <ul id="reservationsList">
+            <!-- Reservations will be added dynamically -->
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  width: auto;
+}
+
+/* Mine */
+
+/* main */
+
+@media (max-width: 1000px) {
+  main {
+    min-height: 100vh;
+  }
+}
+
+main,
+h1 {
+  color: cadetblue;
+  font-size: 40px;
+  padding: 30px;
+}
+
+.top-class button {
+  background-color: rgb(81, 10, 10);
+  cursor: pointer;
+  width: 180px;
+  height: 47px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.top-class{
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+main {
+  flex-grow: 1;
+  min-height: auto;
+}
+
+.button {
+  display: flex;
+  gap: 150px;
+  padding: 30px;
+  overflow-x: scroll;
+}
+
+.button button {
+  border-color: red;
+  width: 140px;
+  height: 40px;
+  border-radius: 50px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.boxx {
+  flex: 1 1 calc(22% - 15px);
+  box-sizing: border-box;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.boxx img {
+  max-width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.boxx .h1 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.boxx .cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.boxx .cart p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+}
+
+.boxx .cart button {
+  background-color: #913c0b;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.boxx .cart button:hover {
+  background-color: #630909;
+}
+
+@media (max-width: 768px) {
+  .boxx {
+    flex: 1 1 calc(30% - 15px);
+  }
+}
+
+@media (max-width: 480px) {
+  .boxx {
+    flex: 1 1 calc(48% - 15px);
+  }
+}
