@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="assets/css/admenu.css" />
+    <title>Food Menu</title>
+  </head>
+  <body>
+    <div class="top-class" style="display: flex; flex-direction: row;">
+      <h1 style="padding: 60px">Our Regular Menu Pack</h1>
+      <button>
+        <a href="addmenu-form.html" style="text-decoration: none; color: white;
+        ">Add New Dish</a>
+      </button>
+    </div>
+
+    <div class="button">
+      <button
+        style="background-color: olivedrab; color: white"
+        onclick="filterCategory('all')"
+      >
+        All
+      </button>
+      <div class="front-div">
+        <button onclick="filterCategory('soup')">Soup</button>
+        <button onclick="filterCategory('vegetarian')">Vegetarian</button>
+        <button onclick="filterCategory('dessert')">Dessert</button>
+        <button onclick="filterCategory('drinks')">Drinks</button>
+        <button onclick="filterCategory('dishes')">Dishes</button>
+        <button onclick="filterCategory('snacks')">Snacks</button>
+      </div>
+
+      <div class="back-div">
+        <button style="background-color: red">
+          <a href="index.html" style="text-decoration: none; color: white"
+            >Dashboard</a
+          >
+        </button>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Lasagna Dish (Soup) -->
+      <div class="boxx" data-category="soup" id="box1">
+        <img src="frontend/img/Soup1.jpg" alt="Lasagna" />
+        <div class="h1">Melon-soup</div>
+        <div class="cart">
+          <p>₦5000</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box1"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="soup" id="box2">
+        <img src="frontend/img/Soup2.jpg" alt="Lasagna" />
+        <div class="h1">Afang-Soup</div>
+        <div class="cart">
+          <p>₦5000</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box2"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="soup" id="box3">
+        <img src="frontend/img/Soup3.jpg" alt="Lasagna" />
+        <div class="h1">White-Soup</div>
+        <div class="cart">
+          <p>₦5000</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box3"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="soup" id="box4">
+        <img src="frontend/img/Soup4.jpg" alt="Lasagna" />
+        <div class="h1">Vegetable-Soup</div>
+        <div class="cart">
+          <p>₦5000</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box4"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <!-- Vegetarian Dish -->
+      <div class="boxx" data-category="vegetarian" id="box5">
+        <img src="frontend/img/vegetarian1.jpg" alt="Vegetarian Dish" />
+        <div class="h1">Moi-Moi</div>
+        <div class="cart">
+          <p>₦800</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box5"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="vegetarian" id="box6">
+        <img src="frontend/img/vegetarian2.jpg" alt="Vegetarian Dish" />
+        <div class="h1">Fried Plantain$Beans</div>
+        <div class="cart">
+          <p>₦1250</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box6"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="vegetarian" id="box7">
+        <img src="frontend/img/vegetarian3.jpg" alt="Vegetarian Dish" />
+        <div class="h1">Cooked Potatoes</div>
+        <div class="cart">
+          <p>₦1500</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box7"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="vegetarian" id="box8">
+        <img src="frontend/img/vegetarian4.jpg" alt="Vegetarian Dish" />
+        <div class="h1">Yam Porridge</div>
+        <div class="cart">
+          <p>₦2800</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box8"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="vegetarian" id="box9">
+        <img
+          src="frontend/img/vegetarian5.jpg"
+          alt="Vegetarian Dish"
+          id="box9"
+        />
+        <div class="h1">Plantain Porridge</div>
+        <div class="cart">
+          <p>₦2800</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box9"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="vegetarian" id="box10">
+        <img src="frontend/img/vegetarian6-min.jpg" alt="Vegetarian Dish" />
+        <div class="h1">Beans Cake</div>
+        <div class="cart">
+          <p>₦800</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box10"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <!-- Dessert Dish -->
+      <div class="boxx" data-category="dessert" id="box12">
+        <img src="frontend/img/dessert1.jpg" alt="Chocolate Cake" />
+        <div class="h1">Chocolate Cake</div>
+        <div class="cart">
+          <p>₦1300</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box12"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="dessert" id="box13">
+        <img src="frontend/img/dessert13.jpg" alt="Chocolate Cake" />
+        <div class="h1">Sandwich</div>
+        <div class="cart">
+          <p>₦1400</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box13"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="dessert" id="box14">
+        <img src="frontend/img/dessert2.jpg" alt="Chocolate Cake" />
+        <div class="h1">Vanilla Cake</div>
+        <div class="cart">
+          <p>₦1300</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box14"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="dessert" id="box15">
+        <img src="frontend/img/dessert3.jpg" alt="Chocolate Cake" />
+        <div class="h1">Chocolate ice-cream</div>
+        <div class="cart">
+          <p>₦1300</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box15]"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="dessert" id="box16">
+        <img src="frontend/img/dessert4.jpg" alt="Chocolate Cake" />
+        <div class="h1">Doughnut</div>
+        <div class="cart">
+          <p>₦1300</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box16"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="dessert" id="box17">
+        <img src="frontend/img/dessert5.jpg" alt="Chocolate Cake" />
+        <div class="h1">Berries</div>
+        <div class="cart">
+          <p>₦1450</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box17"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="dessert" id="box18">
+        <img src="frontend/img/dessert6.jpg" alt="Chocolate Cake" />
+        <div class="h1">Choco-Vanila</div>
+        <div class="cart">
+          <p>₦1400</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box18"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <!-- Drinks -->
+      <div class="boxx" data-category="drinks" id="box19">
+        <img src="frontend/img/drink1.jpg" alt="Smoothie" />
+        <div class="h1">Smtnn</div>
+        <div class="cart">
+          <p>₦3000</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box19"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="drinks" id="box20">
+        <img src="frontend/img/drink2.jpg" alt="Smoothie" />
+        <div class="h1">Scotch</div>
+        <div class="cart">
+          <p>₦3000</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box20"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="drinks" id="box21">
+        <img src="frontend/img/drink3.jpg" alt="Smoothie" />
+        <div class="h1">Vodka</div>
+        <div class="cart">
+          <p>₦10000</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box21"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="drinks" id="box22">
+        <img src="frontend/img/drink4.jpg" alt="Smoothie" />
+        <div class="h1">Red Wine</div>
+        <div class="cart">
+          <p>₦10000</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box22"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="drinks" id="box23">
+        <img src="frontend/img/drink5.jpg" alt="Smoothie" />
+        <div class="h1">Berry Smoothie</div>
+        <div class="cart">
+          <p>₦10000</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box23"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <!-- Dish Example -->
+      <div class="boxx" data-category="dishes" id="box24">
+        <img src="frontend/img/dish1.jpg" alt="Grilled Chicken" />
+        <div class="h1">Naija Jollof</div>
+        <div class="cart">
+          <p>₦5500</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box24"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="dishes" id="box25">
+        <img src="frontend/img/dish2.jpg" alt="Grilled Chicken" />
+        <div class="h1">Fried Rice</div>
+        <div class="cart">
+          <p>₦5500</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box25"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="dishes" id="box26">
+        <img src="frontend/img/dish3.jpg" alt="Grilled Chicken" />
+        <div class="h1">Egg-Fried Rice</div>
+        <div class="cart">
+          <p>₦6000</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box26"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="dishes" id="box27">
+        <img src="frontend/img/dish4.jpg" alt="Grilled Chicken" />
+        <div class="h1">Cocunut Rice</div>
+        <div class="cart">
+          <p>₦6000</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box27"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="dishes" id="box28">
+        <img src="frontend/img/dish5.jpg" alt="Grilled Chicken" />
+        <div class="h1">Rice with Stew</div>
+        <div class="cart">
+          <p>₦6000</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box28"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="dishes" id="box29">
+        <img src="frontend/img/dish6.jpg" alt="Grilled Chicken" />
+        <div class="h1">Sea-Food Rice</div>
+        <div class="cart">
+          <p>₦6000</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box29"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="dishes" id="box30">
+        <img src="frontend/img/dish7.jpg" alt="Grilled Chicken" />
+        <div class="h1">Spaghetti</div>
+        <div class="cart">
+          <p>₦6000</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box30"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+      <div class="boxx" data-category="dishes" id="box31">
+        <img src="frontend/img/dish8.jpg" alt="Grilled Chicken" />
+        <div class="h1">Macaroni</div>
+        <div class="cart">
+          <p>₦4500</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box31"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <!-- Snack -->
+      <div class="boxx" data-category="snacks" id="box32">
+        <img src="frontend/img/snack1.jpg" alt="Cheese Sticks" />
+        <div class="h1">Fried Ice-cream</div>
+        <div class="cart">
+          <p>₦2500</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box32"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="snacks" id="box33">
+        <img src="frontend/img/snack11 (2).jpg" alt="Cheese Sticks" />
+        <div class="h1">Cup Cake</div>
+        <div class="cart">
+          <p>₦2500</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box33"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="snacks" id="box34">
+        <img src="frontend/img/snack2.jpg" alt="Cheese Sticks" />
+        <div class="h1">Fries and Chicken</div>
+        <div class="cart">
+          <p>₦2500</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box34"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="snacks" id="box35">
+        <img src="frontend/img/snack3.jpg" alt="Cheese Sticks" />
+        <div class="h1">Burger</div>
+        <div class="cart">
+          <p>₦2500</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box35"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="snacks" id="box36">
+        <img src="frontend/img/snack4.jpg" alt="Spring Rolls" />
+        <div class="h1">Choco-Cookies</div>
+        <div class="cart">
+          <p>₦2500</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box36"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="snacks" id="box37">
+        <img src="frontend/img/snack5.jpg" alt="Spring Rolls" />
+        <div class="h1">Sharwarma</div>
+        <div class="cart">
+          <p>₦2500</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box37"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="snacks" id="box38">
+        <img src="frontend/img/snack6.jpg" alt="Spring Rolls" />
+        <div class="h1">Pizza</div>
+        <div class="cart">
+          <p>₦2500</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box38"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="snacks" id="box39">
+        <img src="frontend/img/snack12.jpg" alt="Spring Rolls" />
+        <div class="h1">Spring Rolls</div>
+        <div class="cart">
+          <p>₦2500</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box39"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="snacks" id="box40">
+        <img src="frontend/img/snack12.jpg" alt="Spring Rolls" />
+        <div class="h1">Spring Rolls</div>
+        <div class="cart">
+          <p>₦2500</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box40"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="boxx" data-category="snacks" id="box41">
+        <img src="frontend/img/snack12.jpg" alt="Spring Rolls" />
+        <div class="h1">Spring Rolls</div>
+        <div class="cart">
+          <p>₦2500</p>
+          <button
+            class="add-to-cart-btn"
+            data-name="Melon-soup"
+            data-price="5000"
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="editmenu.html?id=box41"
+              >Edit</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <!-- Add more boxes as needed -->
+    </div>
+
+    <script src="assets/js/admenu.js"></script>
+
+    <script src="frontend/js/script.js"></script>
+  </body>
+</html>

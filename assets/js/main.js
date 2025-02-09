@@ -1,8 +1,10 @@
 // Simulated API response (replace with actual API calls)
+let table = new DataTable("#myTable");
+
 const apiData = {
-  totalOrders: 125,
-  totalRevenue: 3200,
-  pendingOrders: 12,
+  // totalOrders: 125,
+  // totalRevenue: 3200,
+  // pendingOrders: 12,
   activeReservations: 7,
   orders: [
     { id: 1023, customer: "John Doe", status: "Preparing", price: 45 },
@@ -16,9 +18,9 @@ const apiData = {
 };
 
 // Update stats
-document.getElementById("totalOrders").innerText = apiData.totalOrders;
-document.getElementById("totalRevenue").innerText = apiData.totalRevenue;
-document.getElementById("pendingOrders").innerText = apiData.pendingOrders;
+// document.getElementById("totalOrders").innerText = apiData.totalOrders;
+// document.getElementById("totalRevenue").innerText = apiData.totalRevenue;
+// document.getElementById("pendingOrders").innerText = apiData.pendingOrders;
 document.getElementById("activeReservations").innerText =
   apiData.activeReservations;
 
